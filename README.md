@@ -1,8 +1,8 @@
 # Active Directory Lab: Implementing Tiered Organizational Units (OUs)
 
-**WATCH THE VIDEO HERE**
+**WATCH THE VIDEO HERE:**
 
-https://www.loom.com/share/db8db05333cb4dae999164bbae40a077
+https://www.loom.com/share/7c692f0cb222499b88b9412f2f1453e1
 
 # Project Overview
 
@@ -12,7 +12,7 @@ This lab demonstrates the configuration of a Windows-based identity management s
 
 Cloud Provider: AWS (EC2)
 
-Operating System: Windows Server 2022
+Operating System: Windows Server 2025
 
 Role: Active Directory Domain Services (AD DS)
 
@@ -41,13 +41,15 @@ Security Note: Ensured the "Protect container from accidental deletion" checkbox
 
 Under the "Global" parent OU, I created two functional sub-units to categorize objects by type. For each of these, I maintained the "Protect from accidental deletion" setting for increased environment stability.
 
-LAB_Standard_users: Dedicated container for all non-administrative user accounts.
+LAB_Standard_Users: Dedicated container for all non-administrative user accounts.
 
 LAB_Workstations: Dedicated container for computer objects and virtual desktops joined to the domain.
 
 # Key Results & Security Hardening
+
 **Accidental Deletion Protection:** By checking the "Protect from accidental deletion" box, the Object tab in the OU properties now requires an explicit permission change before the OU can be removed, preventing catastrophic accidental loss of directory structure.
 
 **Inheritance Readiness:** This structure is now prepared for Group Policy Objects (GPOs). I can now apply security baseline policies to LAB_Workstations without affecting the LAB_Standard_users.
+
 
 
